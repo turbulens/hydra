@@ -13,7 +13,7 @@ window.onbeforeunload = function(){
 //create scene selector
 var elem = document.createElement("span");
 elem.className = "selector";
-elem.innerHTML = "<select><option>Empty</option></select> ";
+elem.innerHTML = "<select><option>Empty</option></select> <button id='save'>Save</button><button id='load'>Load</button>";
 editor.tools.appendChild(elem);
 graph.load( "litegraph/json/spidermoon.json" );
 var select = elem.querySelector("select");
@@ -55,6 +55,7 @@ function addDemo( name, url )
 //some examples
 addDemo("Spidermoon", "litegraph/json/spidermoon.json");
 addDemo("MSML", "litegraph/json/msml.json");
+addDemo("Julien", "litegraph/json/julien.json");
 /*addDemo("Features", "litegraph/json/features.json");
 addDemo("Benchmark", "litegraph/json/benchmark.json");
 addDemo("Audio", "litegraph/json/audio.json");
