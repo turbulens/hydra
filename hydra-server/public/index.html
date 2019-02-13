@@ -23,8 +23,15 @@
   <link rel="stylesheet" href="./css/modal.css">
   <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/597fe374-3d18-46a5-b99c-ceff1f8ffd79%2Ffavicon.png?1530891352785"/>
 
+  <!-- LiteGraph from Javi Agenjo (@tamat)  -->  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" type="text/css" href="./litegraph/css/litegraph.css">
+  <link rel="stylesheet" type="text/css" href="./litegraph/css/litegraph-editor.css">
+  <link rel="stylesheet" type="text/css" href="./litegraph/css/litegraph-style.css"> 
+
 </head>
 <body>
+  
   <div id="hydra-ui">
     <form action="" id="code-holder" name="code-holder">
       <textarea id="code" name="code"></textarea>
@@ -48,31 +55,33 @@
       </div>
       <div id="modal-body">
         <div id="modal-content">
-          <h1> hydra</h1>
-          <h3> live coding networked visuals </h3>
-            <br> ///////////////////////////////////////////////////////////<br>
-            <h4> Hydra is a platform for live coding visuals, in which each connected browser window can be used as a node of a modular and distributed video synthesizer.</h4>
-          <h4> To get started: <ol>
-              <li>Close this window </li>
-                <li>Change some numbers </li>
-                <li>Type Ctrl + Shift + Enter </li>
-              </ol>
-          </h4>
-
-          <p> ///////////////////////////////////////////////////////////<br><br><br>Built using WebRTC (peer-to-peer web streaming) and WegGL, hydra allows each connected browser/device/person to output a video signal or stream, and receive and modify streams from other browsers/devices/people. The API is inspired by analog modular synthesis, in which multiple visual sources (oscillators, cameras, application windows, other connected windows) can be transformed, modulated, and composited via combining sequences of functions. </p>
-          <p>Features: <ul>
-          <li>Written in javascript and compatible with other javascript libraries</li>
-          <li>Available as a platform as well as a set of standalone modules </li>
-          <li>Cross-platform and requires no installation (runs in the browser)</li>
-          <li>Also available as a package for live coding from within atom text editor</li>
-          <li>Experimental and forever evolving !! </li>
-          </ul>
-          <p> For more information and instructions, see <a href="https://github.com/ojack/hydra" target="_blank">the documentation on github</a> or <a href="https://talk.lurk.org/channel/hydra" target="_blank">join the forum.</a></p><br>
-          <p class="align-right"> Created by <a class="olivia" href="https://twitter.com/_ojack_" target="_blank">olivia.</a> </p>
-          <br><br>Special thanks to the community of contributors: Alvaro O'Byrne, Alexandra Cardenas, Daniel Pinheiro, Débora Falleiros Gonzales, Guy John, Lisa Parra, Nelson Vera, Rafael Puyana, Rodrigo Velasco, Sebastian Avila, Will Humphreys, Yancy Way, Zach Krall.</span></p>
-        </div>
+          
+          <!-- LiteGraph from Javi Agenjo (@tamat)  --> 
+          <div id="main">
+          </div>
       </div>
     </div>
   </div>
+ 
+  <script type="text/javascript" src="./litegraph/external/jquery-1.6.2.min.js"></script>
+  <!-- <script type="text/javascript" src="http://tamats.com/projects/sillyserver/src/sillyclient.js"></script> -->
+  <script type="text/javascript" src="./litegraph/js/libs/audiosynth.js"></script>
+
+  <script type="text/javascript" src="./litegraph/js/litegraph.js"></script>
+  <script type="text/javascript" src="./litegraph/js/litegraph-editor.js"></script>
+
+  <script type="text/javascript" src="./litegraph/js/nodes/base.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/logic.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/events.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/math.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/interface.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/graphics.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/input.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/midi.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/audio.js"></script>
+  <script type="text/javascript" src="./litegraph/js/nodes/network.js"></script>
+
+  <script type="text/javascript" src="./litegraph/js/demos.js"></script>
+	<script type="text/javascript" src="./litegraph/js/code.js"></script>
 </body>
 </html>

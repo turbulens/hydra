@@ -35,7 +35,7 @@
   height: 70%;
   min-width: 800px;
   min-height: 300px;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.4);
   border: 1px solid white;
   padding: 0px;
   margin: 0px;

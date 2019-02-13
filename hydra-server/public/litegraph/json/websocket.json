@@ -1,0 +1,308 @@
+{
+    "last_node_id": 17,
+    "last_link_id": 19,
+    "nodes": [
+        {
+            "id": 1,
+            "type": "audio/destination",
+            "pos": [
+                673,
+                171
+            ],
+            "size": {
+                "0": 140,
+                "1": 20
+            },
+            "flags": {},
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "in",
+                    "type": "audio",
+                    "link": 18
+                }
+            ],
+            "properties": {}
+        },
+        {
+            "id": 0,
+            "type": "audio/source",
+            "pos": [
+                418,
+                190
+            ],
+            "size": {
+                "0": 140,
+                "1": 62
+            },
+            "flags": {},
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "gain",
+                    "type": "number",
+                    "link": 5
+                },
+                {
+                    "name": "Play",
+                    "type": -1,
+                    "link": 6
+                },
+                {
+                    "name": "Stop",
+                    "type": -1,
+                    "link": 7
+                },
+                {
+                    "name": "playbackRate",
+                    "type": "number",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "out",
+                    "type": "audio",
+                    "links": [
+                        18
+                    ]
+                }
+            ],
+            "title": "Batchass-MSML",
+            "properties": {
+                "src": "litegraph/data/spidermoon.wav",
+                "gain": 0.5,
+                "loop": true,
+                "autoplay": true,
+                "playbackRate": 1.0000000000000002
+            },
+            "boxcolor": "#AA4"
+        },
+        {
+            "id": 17,
+            "type": "network/websocket",
+            "pos": [
+                593,
+                34
+            ],
+            "size": {
+                "0": 140,
+                "1": 34
+            },
+            "flags": {},
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "send",
+                    "type": -1,
+                    "link": null
+                },
+                {
+                    "name": "in",
+                    "type": 0,
+                    "link": 16
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "received",
+                    "type": -1,
+                    "links": null
+                },
+                {
+                    "name": "out",
+                    "type": 0,
+                    "links": null
+                }
+            ],
+            "properties": {
+                "url": "127.0.0.1:8088",
+                "room": "lgraph",
+                "only_send_changes": true
+            },
+            "boxcolor": "#6C6"
+        },
+        {
+            "id": 5,
+            "type": "widget/knob",
+            "pos": [
+                497,
+                3
+            ],
+            "size": [
+                54,
+                74
+            ],
+            "flags": {},
+            "mode": 0,
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "number",
+                    "links": [
+                        16
+                    ]
+                }
+            ],
+            "title": "Red",
+            "properties": {
+                "min": 0,
+                "max": 1,
+                "value": 0,
+                "wcolor": "#7AF",
+                "size": 50
+            },
+            "boxcolor": "rgba(0,0,0,1.0)"
+        },
+        {
+            "id": 6,
+            "type": "widget/knob",
+            "pos": [
+                419,
+                19
+            ],
+            "size": [
+                54,
+                74
+            ],
+            "flags": {},
+            "mode": 0,
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "number",
+                    "links": [
+                        5
+                    ]
+                }
+            ],
+            "title": "Volume",
+            "properties": {
+                "min": 0,
+                "max": 1,
+                "value": 0.48,
+                "wcolor": "#7AF",
+                "size": 50
+            },
+            "boxcolor": "rgba(128,128,128,1.0)"
+        },
+        {
+            "id": 7,
+            "type": "widget/button",
+            "pos": [
+                83,
+                29
+            ],
+            "size": [
+                128,
+                43
+            ],
+            "flags": {},
+            "mode": 0,
+            "outputs": [
+                {
+                    "name": "clicked",
+                    "type": -1,
+                    "links": [
+                        6
+                    ]
+                }
+            ],
+            "properties": {
+                "text": "Play",
+                "font_size": 40,
+                "message": "",
+                "font": "40px Arial"
+            }
+        },
+        {
+            "id": 8,
+            "type": "widget/button",
+            "pos": [
+                272,
+                29
+            ],
+            "size": [
+                128,
+                43
+            ],
+            "flags": {},
+            "mode": 0,
+            "outputs": [
+                {
+                    "name": "clicked",
+                    "type": -1,
+                    "links": [
+                        7
+                    ]
+                }
+            ],
+            "properties": {
+                "text": "Stop",
+                "font_size": 40,
+                "message": "",
+                "font": "40px Arial"
+            }
+        }
+    ],
+    "links": [
+        [
+            5,
+            6,
+            0,
+            0,
+            0,
+            null
+        ],
+        [
+            6,
+            7,
+            0,
+            0,
+            1,
+            null
+        ],
+        [
+            7,
+            8,
+            0,
+            0,
+            2,
+            null
+        ],
+        [
+            16,
+            5,
+            0,
+            17,
+            1,
+            0
+        ],
+        [
+            18,
+            0,
+            0,
+            1,
+            0,
+            "audio"
+        ],
+        [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ]
+    ],
+    "groups": [],
+    "config": {}
+}
