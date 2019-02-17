@@ -28,11 +28,11 @@ function Editor( container_id, options )
 	//this.addToolsButton("loadsession_button","Load","./litegraph/imgs/icon-load.png", this.onLoadButton.bind(this), ".tools-left" );
 	//this.addToolsButton("savesession_button","Save","./litegraph/imgs/icon-save.png", this.onSaveButton.bind(this), ".tools-left" );
 	//this.addLoadCounter();
-	this.addToolsButton("playnode_button","Play","./litegraph/imgs/icon-play.png", this.onPlayButton.bind(this), ".tools-left" );
+	this.addToolsButton("playnode_button","","./litegraph/imgs/icon-play.png", this.onPlayButton.bind(this), ".tools-left" );
 	//this.addToolsButton("playstepnode_button","Step","./litegraph/imgs/icon-playstep.png", this.onPlayStepButton.bind(this), ".tools-left" );
 	
 	if(!options.skip_livemode)
-		this.addToolsButton("livemode_button","Live","./litegraph/imgs/icon-record.png", this.onLiveButton.bind(this), ".tools-left" );
+		this.addToolsButton("livemode_button","","./litegraph/imgs/icon-record.png", this.onLiveButton.bind(this), ".tools-left" );
 	//if(!options.skip_maximize)
 	//	this.addToolsButton("maximize_button","","./litegraph/imgs/icon-maximize.png", this.onFullscreenButton.bind(this), ".tools-right" );
 	if(options.miniwindow)
@@ -127,12 +127,12 @@ Editor.prototype.onPlayButton = function()
 
 	if(graph.status == LGraph.STATUS_STOPPED)
 	{
-		button.innerHTML = "<img src='./litegraph/imgs/icon-stop.png'/> Stop";
+		button.innerHTML = "<img src='./litegraph/imgs/icon-stop.png'/>";// Stop
 		graph.start(); 
 	}
 	else
 	{
-		button.innerHTML = "<img src='./litegraph/imgs/icon-play.png'/> Play";
+		button.innerHTML = "<img src='./litegraph/imgs/icon-play.png'/>";// Play
 		graph.stop(); 
 	}
 }
@@ -151,7 +151,7 @@ Editor.prototype.onLiveButton = function()
 	this.graphcanvas.draw();
 	var url = this.graphcanvas.live_mode ? "./litegraph/imgs/gauss_bg_medium.jpg" : "./litegraph/imgs/gauss_bg.jpg";
 	var button = this.root.querySelector("#livemode_button");
-	button.innerHTML = !is_live_mode ? "<img src='./litegraph/imgs/icon-record.png'/> Live" : "<img src='./litegraph/imgs/icon-gear.png'/> Edit" ;
+	button.innerHTML = !is_live_mode ? "<img src='./litegraph/imgs/icon-record.png'/> " : "<img src='./litegraph/imgs/icon-gear.png'/> " ;
 }
 
 Editor.prototype.goFullscreen = function()

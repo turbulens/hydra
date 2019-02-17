@@ -13,7 +13,7 @@ window.onbeforeunload = function(){
 //create scene selector
 var elem = document.createElement("span");
 elem.className = "selector";
-elem.innerHTML = "<select><option>Empty</option></select> <button id='save'>Save</button><button id='load'>Load</button>";
+elem.innerHTML = "<select><option>Spidermoon</option></select> <label id='save'></label><label id='load'></label>";// BL was button
 editor.tools.appendChild(elem);
 graph.load( "litegraph/json/spidermoon.json" );
 var select = elem.querySelector("select");
@@ -53,10 +53,19 @@ function addDemo( name, url )
 }
 
 //some examples
-addDemo("Spidermoon", "litegraph/json/spidermoon.json");
-addDemo("MSML", "litegraph/json/msml.json");
+addDemo("Batchass-MSML", "litegraph/json/msml.json");
 addDemo("Julien", "litegraph/json/julien.json");
-/*addDemo("Features", "litegraph/json/features.json");
+addDemo("Batchass-Sky", "litegraph/json/sky.json");
+addDemo("fearfromanotherplanet", "litegraph/json/fearfromanotherplanet.json");
+addDemo("funxfilter", "litegraph/json/funxfilter.json");
+addDemo("prusston", "litegraph/json/prusston.json");
+addDemo("sadwrestler", "litegraph/json/sadwrestler.json");
+addDemo("sisick", "litegraph/json/sisick.json");
+addDemo("snarewar", "litegraph/json/snarewar.json");
+
+/*
+
+addDemo("Features", "litegraph/json/features.json");
 addDemo("Benchmark", "litegraph/json/benchmark.json");
 addDemo("Audio", "litegraph/json/audio.json");
 addDemo("Audio Delay", "litegraph/json/audio_delay.json");
