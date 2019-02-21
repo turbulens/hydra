@@ -4664,7 +4664,7 @@ LGraphCanvas.prototype.processKey = function(e)
 
 	if(e.type == "keydown")
 	{
-		if(e.keyCode == 32) //esc
+		if(e.keyCode == 32 && e.ctrlKey) //ctrl space, not esc
 		{
 			this.dragging_canvas = true;
 			block_default = true;
@@ -4712,7 +4712,7 @@ LGraphCanvas.prototype.processKey = function(e)
 	}
 	else if( e.type == "keyup" )
 	{
-		if(e.keyCode == 32)
+		if(e.keyCode == 32 && e.ctrlKey)
 			this.dragging_canvas = false;
 
 		if(this.selected_nodes)

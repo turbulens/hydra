@@ -62,6 +62,7 @@ addDemo("prusston", "litegraph/json/prusston.json");
 addDemo("sadwrestler", "litegraph/json/sadwrestler.json");
 addDemo("sisick", "litegraph/json/sisick.json");
 addDemo("snarewar", "litegraph/json/snarewar.json");
+addDemo("websocket", "litegraph/json/websocket.json");
 
 /*
 
