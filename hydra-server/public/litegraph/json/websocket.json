@@ -68,7 +68,7 @@
                     ]
                 }
             ],
-            "title": "Batchass-MSML",
+            "title": "Batchass-Spidermoon",
             "properties": {
                 "src": "litegraph/data/spidermoon.wav",
                 "gain": 0.5,
@@ -116,7 +116,7 @@
                 }
             ],
             "properties": {
-                "url": "127.0.0.1:8088",
+                "url": "turbulens.fr/ws/",
                 "room": "lgraph",
                 "only_send_changes": true
             },

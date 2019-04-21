@@ -48,6 +48,9 @@ var EditorClass = function () {
       'Shift-Ctrl-S': function (instance) {
         screencap()
       },
+      'Alt-E': function (instance) {
+        wssend()
+      },
       'Alt-S': function (instance) {
         webrtcsend()
       },
