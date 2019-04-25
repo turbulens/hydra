@@ -11,7 +11,8 @@ const shortid = require('shortid')
 var PatchBay = function (options) {
 // connect to websocket signalling server. To DO: error validation
   //this.signaller = io(options.server)
-  this.signaller =  new WebSocket('ws://turbulens.fr/ws/');
+  //this.signaller =  new WebSocket('ws://turbulens.fr/ws/');
+  this.signaller =  new WebSocket('ws://127.0.0.1:8088'); 
 
   //assign unique id to this peer, or use id passed in
 
