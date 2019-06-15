@@ -8,7 +8,7 @@ var server = http.createServer(function(req, res) {
         response = [message, version].join('\n');
     res.end(response);
 });
-server.listen(80); 
+server.listen(8000); 
 /*
 //const fs = require('fs')
 const express = require('express');
